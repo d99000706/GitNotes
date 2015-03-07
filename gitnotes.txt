@@ -1,0 +1,45 @@
+
+3/7/2015:
+remote repository transfer with push and pull
+to add a remote:
+git remote add origin url                   (origin is customary??)
+use git remote -v to see verbose pull & push url’s
+to push use git push origin master                
+
+3/6/2015:
+
+merging - can merge 2 branches
+get merge branch1 branch2
+after merging commits sorted by date/time so commits from different branches may be interleaved
+so... git diff may show a lot of changes since 2 sequential commits may have been interleaved from 2 different branches!!
+git show id - shows diff between id and parent when you may not know what the parent was
+can delete a branch with
+git branch -d branchName
+does not delete the commits, only the branch label
+commits may or may not be reachable depending on whether a merge was done
+merge conflicts
+
+branching:
+tip - current last commit on a branch
+git log --graph -- oneline master easy_mode
+git reset -- hard   removes changes from working directory and staging area  (BE CAREFUL - cannot undo this since not committed)
+git add to add to “staging” area
+working directory
+staging area
+repository
+can use git init to create repository in current folder
+installed git from:  http://msysgit.github.io/
+compare files in commits with get diff
+git diff originalArg, newArg
+git diff with no args compares working directory and staging area
+git diff --staged compares contents of staging area with repository
+clone with git clone https://...
+use git log to see history
+use git log --stat to see stats in log history
+use git config --global color.ui auto to colorize changes in diff command
+git config --global core.editor "c:/notepad++/notepad++.exe” -w     // notice how -w is outside, else notepad++ wants to create a -w file!!!
+bug with -w this seemed to fix:
+git config --global core.editor "'C:\Program Files\Notepad++\notepad++.exe'  -multiInst -notabbar -nosession -noPlugin"
+use git checkout commitId to get older version
+creates a detached head state warning since we are not at the “head” of the repository
+press Q to quit out of more listing
